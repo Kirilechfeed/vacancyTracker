@@ -13,12 +13,12 @@ export function Navigation() {
   ];
 
   return (
-    <nav className="flex gap-2 flex-wrap">
+    <nav className="flex flex-wrap justify-center gap-2">
       {navItems.map(({ path, label, icon: Icon }) => (
         <Link
           key={path}
           to={path}
-          className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-colors ${
+          className={`flex w-full sm:w-auto items-center justify-center gap-2 px-4 py-3 sm:px-4 sm:py-2 rounded-lg transition-colors ${
             isActive(path)
               ? 'bg-blue-500 text-white'
               : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'

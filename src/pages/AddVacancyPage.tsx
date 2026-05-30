@@ -16,7 +16,7 @@ export function AddVacancyPage() {
   return (
     <div className="space-y-6">
       <Navigation />
-      <div className="max-w-2xl mx-auto">
+      <div className="w-full max-w-2xl mx-auto px-2 sm:px-0">
         <AddVacancyForm onAdd={handleAdd} />
       </div>
     </div>

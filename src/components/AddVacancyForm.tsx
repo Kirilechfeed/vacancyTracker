@@ -172,7 +172,7 @@ export function AddVacancyForm({ onAdd }: AddVacancyFormProps) {
           <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
             Теги (опционально)
           </label>
-          <div className="flex gap-2 mb-2">
+          <div className="flex flex-col sm:flex-row gap-2 mb-2">
             <input
               type="text"
               value={tagInput}
@@ -184,7 +184,7 @@ export function AddVacancyForm({ onAdd }: AddVacancyFormProps) {
             <button
               type="button"
               onClick={addTag}
-              className="px-4 py-2 bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition-colors"
+              className="w-full sm:w-auto px-4 py-2 bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition-colors"
             >
               Добавить
             </button>
