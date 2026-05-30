@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Vacancy, VacancyStatus, JobSource } from '@/types/index';
+import { useState } from 'react';
+import type { Vacancy, VacancyStatus, JobSource } from '@/types';
 import { getStatusColor, formatDate } from '@lib/utils';
 import { ChevronDown, Trash2, ExternalLink } from 'lucide-react';
 

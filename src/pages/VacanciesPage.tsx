@@ -6,7 +6,7 @@ import { useGetVacancies } from '@hooks/useGetVacancies';
 import {useDeleteVacancy} from "@hooks/useDeleteVacancy";
 export function VacanciesPage() {
  
-  const { data, isLoading, error } = useGetVacancies();
+  const { data, isLoading } = useGetVacancies();
   const changeStatusMutation = useChangeStatusVacancy();
   const deleteVacancyMutation = useDeleteVacancy();
   if (isLoading) {

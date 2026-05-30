@@ -1,4 +1,4 @@
-import { Vacancy, JobSource } from "@/types/index";
+import type { JobSource } from "@/types";
 
 export function extractSourceFromUrl(url: string): JobSource {
   try {

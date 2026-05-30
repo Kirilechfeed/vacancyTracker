@@ -1,5 +1,5 @@
-import React, { useMemo } from 'react';
-import { Vacancy } from '@types/index';
+import { useMemo } from 'react';
+import type { Vacancy } from '@/types';
 
 interface StatsCardsProps {
   vacancies: Vacancy[];

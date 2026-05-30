@@ -1,5 +1,5 @@
-import React, { useMemo } from 'react';
-import { Vacancy } from '@/types/index';
+import { useMemo } from 'react';
+import type { Vacancy } from '@/types';
 import {
   LineChart,
   Line,
@@ -11,7 +11,6 @@ import {
   YAxis,
   CartesianGrid,
   Tooltip,
-  Legend,
   ResponsiveContainer,
   Cell,
 } from 'recharts';

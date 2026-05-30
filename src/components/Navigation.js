@@ -1,0 +1,15 @@
+import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
+import { Link, useLocation } from 'react-router-dom';
+import { BarChart3, PlusCircle, ListIcon } from 'lucide-react';
+export function Navigation() {
+    const location = useLocation();
+    const isActive = (path) => location.pathname === path;
+    const navItems = [
+        { path: '/', label: 'Вакансии', icon: ListIcon },
+        { path: '/add', label: 'Добавить', icon: PlusCircle },
+        { path: '/analytics', label: 'Аналитика', icon: BarChart3 },
+    ];
+    return (_jsx("nav", { className: "flex gap-2 flex-wrap", children: navItems.map(({ path, label, icon: Icon }) => (_jsxs(Link, { to: path, className: `flex items-center gap-2 px-4 py-2 rounded-lg transition-colors ${isActive(path)
+                ? 'bg-blue-500 text-white'
+                : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'}`, children: [_jsx(Icon, { size: 18 }), _jsx("span", { className: "text-sm font-medium", children: label })] }, path))) }));
+}

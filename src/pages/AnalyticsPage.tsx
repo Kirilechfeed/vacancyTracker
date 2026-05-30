@@ -7,7 +7,7 @@ import { useGetVacancies } from '@hooks/useGetVacancies';
 
 export function AnalyticsPage() {
 
-  const { data, isLoading, error } = useGetVacancies();
+  const { data, isLoading } = useGetVacancies();
   if (isLoading) {
     return <div className="text-center py-8">Загрузка...</div>;
   }

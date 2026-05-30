@@ -1,4 +1,4 @@
-import { Vacancy, VacancyStatus } from "@types/index";
+import type { Vacancy, VacancyStatus } from "@/types";
 
 const STORAGE_KEY = "vacancy-tracker-data";
 

@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Vacancy, VacancyStatus, JobSource } from '@/types/index';
+import { useState, type FormEvent, type KeyboardEvent } from 'react';
+import type { Vacancy, VacancyStatus } from '@/types';
 import { extractSourceFromUrl, validateUrl } from '@lib/utils';
 import { X } from 'lucide-react';
 
@@ -17,7 +17,7 @@ export function AddVacancyForm({ onAdd }: AddVacancyFormProps) {
   const [tagInput, setTagInput] = useState('');
   const [error, setError] = useState('');
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
     setError('');
 
@@ -78,7 +78,7 @@ export function AddVacancyForm({ onAdd }: AddVacancyFormProps) {
     setTags(tags.filter(t => t !== tag));
   };
 
-  const handleKeyPress = (e: React.KeyboardEvent) => {
+  const handleKeyPress = (e: KeyboardEvent) => {
     if (e.key === 'Enter') {
       e.preventDefault();
       addTag();
